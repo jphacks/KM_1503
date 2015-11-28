@@ -1,0 +1,2 @@
+module TemplateListHelper
+end

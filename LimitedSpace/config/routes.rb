@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "api/download" => "FileDownload#downlwd"
+  post "api/upload" => "FileDownload#upload"
   # webのview
   get "web" => "web#index"
 
