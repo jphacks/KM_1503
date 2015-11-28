@@ -37,8 +37,11 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-#
+
+# bootstrap
 gem 'bootstrap-sass'
+
+# デバッグ用
 gem 'better_errors', group: :development
 gem 'pry-rails', group: :development
 
