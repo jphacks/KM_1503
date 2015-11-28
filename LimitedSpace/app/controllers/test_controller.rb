@@ -1,5 +1,5 @@
 class TestController < ApplicationController
-    def
+    def index
         render action: "index"
     end
 end
