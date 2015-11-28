@@ -103,7 +103,7 @@
                                     <constraint firstAttribute="bottom" secondItem="ppr-2h-EsC" secondAttribute="bottom" id="zSY-ks-KZs"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-36-Tqo">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-36-Tqo">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mxu-wm-OGg">
@@ -258,12 +258,19 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="リミスペ名" id="xdz-tg-xVL"/>
+                    <navigationItem key="navigationItem" title="リミスペ名" id="xdz-tg-xVL">
+                        <barButtonItem key="rightBarButtonItem" image="tile" id="Y9X-KD-sha">
+                            <connections>
+                                <action selector="dispToggleBtnTaped:" destination="H8Z-to-S3a" id="o5D-nZ-OhY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <outlet property="ListView" destination="YpR-q6-WEt" id="OmL-M6-En9"/>
                         <outlet property="collectionView" destination="Mxu-wm-OGg" id="vbY-d0-46U"/>
+                        <outlet property="dispToggleBtn" destination="Y9X-KD-sha" id="hRu-7E-TOn"/>
                         <outlet property="tableView" destination="ppr-2h-EsC" id="FBm-aW-tdd"/>
                         <outlet property="tileView" destination="4bh-36-Tqo" id="KGR-3c-MOf"/>
                     </connections>
@@ -292,4 +299,7 @@
             <point key="canvasLocation" x="493" y="326"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tile" width="44" height="44"/>
+    </resources>
 </document>

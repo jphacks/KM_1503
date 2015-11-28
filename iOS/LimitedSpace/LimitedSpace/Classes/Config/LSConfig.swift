@@ -41,14 +41,20 @@ enum LSNotification :String {
     case LSItemTaped = "LSItemTaped"
 }
 
-enum LSListCellType {
-    case File
-    case Folder
+
+// LSItemView -------------------------
+enum LSFileDisplayType {
+    case List, Tile
 }
+
+enum LSListCellType {
+    case File, Folder
+}
+// ---------------------------------------
 
 
 class LSConfig {
-    class func configureLSColor() {
+    class func configureNavigationStyle() {
         // NavigationBar
         UINavigationBar.appearance().barTintColor = LSColor.getColor(.DarkBlue)
         UINavigationBar.appearance().tintColor = LSColor.getColor(.White)

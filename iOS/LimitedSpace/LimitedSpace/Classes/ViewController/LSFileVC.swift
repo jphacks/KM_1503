@@ -10,12 +10,16 @@ import UIKit
 class LSFileVC: UIViewController {
     
     var itemId :Int?
+    var displayType :LSFileDisplayType = .List
     
     @IBOutlet weak var ListView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var tileView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var dispToggleBtn: UIBarButtonItem!
+    
     
     
     override func viewDidLoad() {
@@ -25,18 +29,7 @@ class LSFileVC: UIViewController {
         
         // cell の読み込み
         self.tableView.registerNib(UINib(nibName: "LSFileListCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "listCell")
-       
-        
-        // DEBUG
-        self.mockCode()
     }
-
-    
-    func mockCode() {
-//        self.tileView.hidden = true
-        self.ListView.hidden = true
-    }
-    
     
     
     
@@ -45,6 +38,34 @@ class LSFileVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
+
+/**
+ *  Button Actions
+ */
+extension LSFileVC {
+    @IBAction func dispToggleBtnTaped(sender: AnyObject) {
+        switch self.displayType {
+        case .List :
+            self.displayType = .Tile
+            self.dispToggleBtn.image = UIImage(named: "list")
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.ListView.alpha = 0
+                self.tileView.alpha = 1
+            })
+            
+        case .Tile :
+            self.displayType = .List
+            self.dispToggleBtn.image = UIImage(named: "tile")
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.ListView.alpha = 1
+                self.tileView.alpha = 0
+            })
+        }
+    }
+    
+}
+ 
 
 
 /**
