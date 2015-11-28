@@ -53,3 +53,8 @@ gem 'kakurenbo-puti'
 
 # パンくずリスト
 gem 'breadcrumbs_on_rails'
+
+# RSpec 
+group :development, :test do
+      gem 'rspec-rails', '~> 3.0'
+end
