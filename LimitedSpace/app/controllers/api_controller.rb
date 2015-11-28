@@ -3,7 +3,7 @@ class ApiController < ApplicationController
     def getLimitedSpaces
         lat = params[:lat]
         lng = params[:lng]
-        render :json => Space.getSpaces( lat, lng) 
+        render :json => Space.getSpaces( lat, lng)
     end
 
     def getSpaceDetail
@@ -20,7 +20,7 @@ class ApiController < ApplicationController
     def createLimitedSpace
         userId = params[:user_id]
         if userId.nil?
-            # ユーザー登録処理 
+            # ユーザー登録処理
             userId = 1
         end
         name = params[:name]
@@ -46,7 +46,7 @@ class ApiController < ApplicationController
             data[:user_id] = userId
             ret[:data] = data
         else
-            # 保存失敗時 
+            # 保存失敗時
             ret = Hash.new
             ret[:code] = 500
         end
@@ -64,10 +64,10 @@ def getFileStructure(spaceId)
         currentDir = structure
         arr = path.split("/")
         arrLength = arr.length
-        arrLength.times do |i|  
+        arrLength.times do |i|
             fname = arr[i]
             if arrLength-1 == i
-                currentDir[:files].push(file.getInfo) 
+                currentDir[:files].push(file.getInfo)
             else
                 if !currentDir[:folders].has_key?(fname)
                     currentDir[:folders][fname] = Hash.new
@@ -78,6 +78,10 @@ def getFileStructure(spaceId)
             end
         end
     end
+    def filedownload
+      file = DataFile.find(params[:data_file_id])
+      send_file file.getPath
+    end
+
     render :json => structure
 end
-
