@@ -25,7 +25,6 @@ class LSFileVC: UIViewController {
         
         // cell の読み込み
         self.tableView.registerNib(UINib(nibName: "LSFileListCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "listCell")
-//        self.collectionView.registerNib(<#T##nib: UINib?##UINib?#>, forCellWithReuseIdentifier: <#T##String#>)
        
         
         // DEBUG
@@ -34,7 +33,8 @@ class LSFileVC: UIViewController {
 
     
     func mockCode() {
-        self.tileView.hidden = true
+//        self.tileView.hidden = true
+        self.ListView.hidden = true
     }
     
     
@@ -103,9 +103,15 @@ extension LSFileVC :UITableViewDelegate, UITableViewDataSource {
 /**
  *  UICollectionView delegate, datasouse
  */
-extension LSFileVC :UICollectionViewDelegate, UICollectionViewDataSource {
+extension LSFileVC :UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let size = collectionView.frame.size
+        
+        return CGSizeMake((size.width-50)/5, (size.width-50)/5)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -115,6 +121,11 @@ extension LSFileVC :UICollectionViewDelegate, UICollectionViewDataSource {
         ?? UICollectionViewCell()
         
         cell.backgroundColor = LSColor.getColor(.White)
+        
+        
+        let imageView = UIImageView(frame: cell.bounds)
+        imageView.image = UIImage(named: "noImage")
+        cell.addSubview(imageView)
         
         return cell
     }
