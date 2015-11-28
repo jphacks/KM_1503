@@ -52,6 +52,23 @@ class ApiController < ApplicationController
         end
         render :json => ret
     end
+
+    def upload
+        file = params[:file]
+
+        name = file.original_filename
+
+        filedata = DataFile.new 
+        filedata.path = "#{params[:current_dir]}#{name}"
+        filedata.save
+        space = Space.find(params[:space_id].to_i)
+
+        #File.open("#{space.getDataPath}#{filedat.id}", "wb"){ |f|
+        File.open("#{space.getPath}test", "wb"){ |f|
+            f.write(file.read)
+        }
+        render :text => "save"
+    end
 end
 def getFileStructure(spaceId)
     # Fileたちを取得

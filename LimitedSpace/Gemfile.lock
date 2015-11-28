@@ -40,6 +40,11 @@ GEM
       sass (>= 3.2.19)
     breadcrumbs_on_rails (2.3.1)
     builder (3.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     chronic (0.10.2)
     coderay (1.1.0)
     coffee-rails (4.0.1)
@@ -159,6 +164,7 @@ DEPENDENCIES
   better_errors
   bootstrap-sass
   breadcrumbs_on_rails
+  carrierwave
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
