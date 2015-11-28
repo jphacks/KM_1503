@@ -24,7 +24,7 @@ class LSItemView: UIView {
 
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        print("hoge")
+        NSNotificationCenter.defaultCenter().postNotificationName(LSNotification.LSItemTaped.rawValue, object: nil, userInfo: nil)
     }
     
     
