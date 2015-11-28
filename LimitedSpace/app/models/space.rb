@@ -25,6 +25,24 @@ class Space < ActiveRecord::Base
     return isInRange
   end
 
+  def self.isOverwrap( space1, space2)
+    r = Math.sqrt(( space2.lat - space1.lat ) ** 2 ) + Math.sqrt(( space2.lng - space1.lng ) ** 2 )
+    isOverwrap = false
+    if( r <= space1.radius + space2.radius )
+        isOverwrap = true
+    end
+    p "#{r}   #{( space1.radius + space2.radius )}"
+    return isOverwrap
+  end
+
+  def self.isDuplicate( space1, space2)
+    isDuplicate = false
+    if( Space.isOverwrap( space1, space2) ) 
+        isDuplicate = space1.name == space2.name
+    end
+    return isDuplicate
+  end
+
   def self.getSpaces( lat, lng )
     spaces = Space.without_soft_destroyed
     retSpaces = Array.new
