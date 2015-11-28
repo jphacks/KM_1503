@@ -6,6 +6,10 @@ class ApiController < ApplicationController
         render :json => Space.getSpaces( lat, lng) 
     end
 
+    def upload
+        render :json => params[:name].class
+    end
+
     def getSpaceDetail
         if params[:space_id].nil?
             ret = Hash.new

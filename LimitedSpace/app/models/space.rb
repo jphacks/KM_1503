@@ -53,4 +53,17 @@ class Space < ActiveRecord::Base
     return retSpaces
   end
 
+  def getPath
+    folderNumber = sprintf("%02d", self.id)
+    return "#{Rails.root}/data/#{folderNumber}/#{self.id}/"
+  end
+
+  def getThumbPath
+    return "#{self.getPath}thumbs/"
+  end
+
+  def getImagePath
+    return "#{self.getPath}images/"
+  end
+
 end
