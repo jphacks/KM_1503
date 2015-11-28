@@ -21,6 +21,7 @@
 		4BC33CBF1C0970AA0094410C /* LSFileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CBE1C0970AA0094410C /* LSFileVC.swift */; };
 		4BC33CC21C098B530094410C /* LSFileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CC01C098B530094410C /* LSFileListCell.swift */; };
 		4BC33CC31C098B530094410C /* LSFileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BC33CC11C098B530094410C /* LSFileListCell.xib */; };
+		4BC33CCB1C0A01290094410C /* LSFileViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CCA1C0A01290094410C /* LSFileViewerVC.swift */; };
 		CF4ACD60B80878A933DEA4FF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFD151645343655DA01A47B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		4BC33CBE1C0970AA0094410C /* LSFileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFileVC.swift; sourceTree = "<group>"; };
 		4BC33CC01C098B530094410C /* LSFileListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFileListCell.swift; sourceTree = "<group>"; };
 		4BC33CC11C098B530094410C /* LSFileListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSFileListCell.xib; sourceTree = "<group>"; };
+		4BC33CCA1C0A01290094410C /* LSFileViewerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFileViewerVC.swift; sourceTree = "<group>"; };
 		BF53AB497CD3C21726F4DCAC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CFFD151645343655DA01A47B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD65A1C26A0E61FE9434D392 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				4B286DFB1C093C4600F59045 /* LimitedSpaceVC.swift */,
 				4BC33CBE1C0970AA0094410C /* LSFileVC.swift */,
+				4BC33CCA1C0A01290094410C /* LSFileViewerVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				4BC33CBF1C0970AA0094410C /* LSFileVC.swift in Sources */,
 				4B286DFF1C093D4E00F59045 /* KRAdditions.swift in Sources */,
 				4BC33CBD1C0964EC0094410C /* LSItemView.swift in Sources */,
+				4BC33CCB1C0A01290094410C /* LSFileViewerVC.swift in Sources */,
 				4B286DF81C09304A00F59045 /* AppDelegate.swift in Sources */,
 				4B286DFA1C0938CC00F59045 /* LSBackgroundView.swift in Sources */,
 				4B286E001C093D4E00F59045 /* KRUtility.swift in Sources */,

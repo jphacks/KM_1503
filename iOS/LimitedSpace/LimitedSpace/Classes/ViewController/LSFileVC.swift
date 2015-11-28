@@ -107,7 +107,12 @@ extension LSFileVC :UITableViewDelegate, UITableViewDataSource {
      
         switch cell.cellType {
         case .File :
-            return
+            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("fileViewerVC") as? LSFileViewerVC
+            guard let fileViewerVC :LSFileViewerVC = vc else { return }
+            
+            fileViewerVC.itemId = 1
+            
+            self.presentViewController(fileViewerVC, animated: false, completion: nil)
             
         case .Folder :
             let vc = self.storyboard?.instantiateViewControllerWithIdentifier("LSFileListVC") as? LSFileVC
@@ -149,5 +154,9 @@ extension LSFileVC :UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         cell.addSubview(imageView)
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
     }
 }
