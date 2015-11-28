@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # webのview
   get "web" => "web#index"
 
+  get "web/files" => "web#files"
+
   # viewのお試し用
   get "test" => "test#index"
 
