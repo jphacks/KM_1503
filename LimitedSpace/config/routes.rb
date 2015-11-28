@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # api
   get "api/getLimitedSpaces" => "api#getLimitedSpaces"
   get "api/getSpaceDetail" => "api#getSpaceDetail"
+  post "api/upload" => "api#upload" 
   post "api/createLimitedSpace" => "api#createLimitedSpace"
   get "api/filedownload" => "api#filedownload"
 

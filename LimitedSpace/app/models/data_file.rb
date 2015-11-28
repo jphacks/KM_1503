@@ -14,4 +14,8 @@ class DataFile < ActiveRecord::Base
 
     return ret
   end
+
+  def getPath
+    return "#{Space.find(self.space_id).getDataPath}#{self.id}"
+  end
 end
