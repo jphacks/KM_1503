@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "api/getLimitedSpaces" => "api#getLimitedSpaces"
   get "api/getSpaceDetail" => "api#getSpaceDetail"
   post "api/createLimitedSpace" => "api#createLimitedSpace"
+  get "api/filedownload" => "api#filedownload"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,5 +1,11 @@
 class ApiController < ApplicationController
     protect_from_forgery except: :createLimitedSpaces
+
+    def filedownload
+      file = DataFile.find(params[:data_file_id])
+      send_file file.getPath
+    end
+
     def getLimitedSpaces
         lat = params[:lat]
         lng = params[:lng]
@@ -77,10 +83,6 @@ def getFileStructure(spaceId)
                 currentDir = currentDir[:folders][fname]
             end
         end
-    end
-    def filedownload
-      file = DataFile.find(params[:data_file_id])
-      send_file file.getPath
     end
 
     render :json => structure
