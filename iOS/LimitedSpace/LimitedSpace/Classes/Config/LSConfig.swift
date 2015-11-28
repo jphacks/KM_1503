@@ -14,6 +14,7 @@ enum LSColor {
     case LightBlue
     case DarkBlue
     case White
+    case LightWhite
     case Pink
     
     static func getColor(color :LSColor) -> UIColor {
@@ -27,13 +28,32 @@ enum LSColor {
         case .White :
             return UIColor(hexStr: "F6F5F2")
             
+        case .LightWhite :
+            return UIColor(hexStr: "FFFEFE")
+            
         case .Pink :
             return UIColor(hexStr: "FF91A8")
         }
     }
 }
 
+enum LSNotification :String {
+    case LSItemTaped = "LSItemTaped"
+}
+
+enum LSListCellType {
+    case File
+    case Folder
+}
+
 
 class LSConfig {
-    
+    class func configureLSColor() {
+        // NavigationBar
+        UINavigationBar.appearance().barTintColor = LSColor.getColor(.DarkBlue)
+        UINavigationBar.appearance().tintColor = LSColor.getColor(.White)
+        UINavigationBar.appearance().titleTextAttributes = [
+                NSForegroundColorAttributeName : LSColor.getColor(.White)
+        ]
+    }
 }

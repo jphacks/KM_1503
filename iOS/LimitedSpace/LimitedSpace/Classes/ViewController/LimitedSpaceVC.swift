@@ -11,9 +11,17 @@ class LimitedSpaceVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Notifications
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("LSItemTapedAction:"), name: LSNotification.LSItemTaped.rawValue, object: nil)
 
+        
         // DEBUG 
         self.mockCode()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     
@@ -25,6 +33,18 @@ class LimitedSpaceVC: UIViewController {
     }
     
     
+    // Notifications -----------------------------------
+    func LSItemTapedAction(notif :NSNotification) {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("LSFileListVC") as? LSFileVC
+        guard let lsFileVC :LSFileVC = vc else {
+            return
+        }
+        
+        lsFileVC.itemId = 1
+        
+        self.navigationController?.pushViewController(lsFileVC, animated: true)
+    }
+    // -------------------------------------------------
     
     
     

@@ -18,6 +18,9 @@
 		4B286E021C093F5900F59045 /* LSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286E011C093F5900F59045 /* LSConfig.swift */; };
 		4BC33CBB1C0964A50094410C /* LSItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BC33CBA1C0964A50094410C /* LSItemView.xib */; };
 		4BC33CBD1C0964EC0094410C /* LSItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CBC1C0964EC0094410C /* LSItemView.swift */; };
+		4BC33CBF1C0970AA0094410C /* LSFileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CBE1C0970AA0094410C /* LSFileVC.swift */; };
+		4BC33CC21C098B530094410C /* LSFileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CC01C098B530094410C /* LSFileListCell.swift */; };
+		4BC33CC31C098B530094410C /* LSFileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BC33CC11C098B530094410C /* LSFileListCell.xib */; };
 		CF4ACD60B80878A933DEA4FF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFD151645343655DA01A47B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		4B286E011C093F5900F59045 /* LSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSConfig.swift; sourceTree = "<group>"; };
 		4BC33CBA1C0964A50094410C /* LSItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSItemView.xib; sourceTree = "<group>"; };
 		4BC33CBC1C0964EC0094410C /* LSItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSItemView.swift; sourceTree = "<group>"; };
+		4BC33CBE1C0970AA0094410C /* LSFileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFileVC.swift; sourceTree = "<group>"; };
+		4BC33CC01C098B530094410C /* LSFileListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFileListCell.swift; sourceTree = "<group>"; };
+		4BC33CC11C098B530094410C /* LSFileListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSFileListCell.xib; sourceTree = "<group>"; };
 		BF53AB497CD3C21726F4DCAC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CFFD151645343655DA01A47B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD65A1C26A0E61FE9434D392 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 				4B286DF91C0938CC00F59045 /* LSBackgroundView.swift */,
 				4BC33CBC1C0964EC0094410C /* LSItemView.swift */,
 				4BC33CBA1C0964A50094410C /* LSItemView.xib */,
+				4BC33CC01C098B530094410C /* LSFileListCell.swift */,
+				4BC33CC11C098B530094410C /* LSFileListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				4B286DFB1C093C4600F59045 /* LimitedSpaceVC.swift */,
+				4BC33CBE1C0970AA0094410C /* LSFileVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BC33CBB1C0964A50094410C /* LSItemView.xib in Resources */,
+				4BC33CC31C098B530094410C /* LSFileListCell.xib in Resources */,
 				4B286DE91C092E6800F59045 /* LaunchScreen.storyboard in Resources */,
 				4B286DE61C092E6800F59045 /* Assets.xcassets in Resources */,
 				4B286DE41C092E6800F59045 /* Main.storyboard in Resources */,
@@ -286,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B286E021C093F5900F59045 /* LSConfig.swift in Sources */,
+				4BC33CC21C098B530094410C /* LSFileListCell.swift in Sources */,
+				4BC33CBF1C0970AA0094410C /* LSFileVC.swift in Sources */,
 				4B286DFF1C093D4E00F59045 /* KRAdditions.swift in Sources */,
 				4BC33CBD1C0964EC0094410C /* LSItemView.swift in Sources */,
 				4B286DF81C09304A00F59045 /* AppDelegate.swift in Sources */,
