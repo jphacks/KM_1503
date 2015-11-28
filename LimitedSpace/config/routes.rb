@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # viewのお試し用
   get "test" => "test#index"
 
+  # api
+  get "api/getLimitedSpaces" => "api#getLimitedSpaces"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
