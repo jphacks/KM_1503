@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   # api
   get "api/getLimitedSpaces" => "api#getLimitedSpaces"
   get "api/getSpaceDetail" => "api#getSpaceDetail"
-  post "api/createLimitedSpaces" => "api#createLimitedSpaces"
   post "api/upload" => "api#upload" 
+  post "api/createLimitedSpace" => "api#createLimitedSpace"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

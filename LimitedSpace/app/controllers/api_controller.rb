@@ -17,7 +17,7 @@ class ApiController < ApplicationController
         structure = getFileStructure(spaceId)
     end
 
-    def createLimitedSpaces
+    def createLimitedSpace
         userId = params[:user_id]
         if userId.nil?
             # ユーザー登録処理 

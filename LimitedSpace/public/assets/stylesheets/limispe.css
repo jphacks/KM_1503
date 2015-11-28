@@ -16,15 +16,16 @@ body{
   height: 100%
 }
 
-.header-row{
-  height: 8%;
+.headr-pad{
+  padding: 0 3% 0 3%;
 }
+
 .header{
-  height: 100%;
+  height: 10%;
 }
 
 .bg-row{
-  height: 87%;
+  height: 100%;
 }
 .bg-col{
   height: 100%
@@ -39,17 +40,32 @@ body{
     height:100%;
 }
 
-.footer-row{
-  height: 5%;
+.footer-pad{
+  padding: 0 3% 0 3%;
 }
 .footer{
-  height: 100%;
+  height: 5%;
 }
 
-.pad{
+#wrap{
+     width: 100%;
+     position: relative;
+     height: 85%;
+}
+
+.file-row-pad{
   padding: 30px 0;
 }
 
 .file-font{
   font-size: 13px;
+}
+
+.make-limispe-button-color{
+  background-color: #FF91A8;
+  border-color: #FF91A8;
+}
+
+.modal-container{
+    width: 100%;
 }
