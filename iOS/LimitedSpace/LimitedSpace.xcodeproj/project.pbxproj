@@ -11,6 +11,12 @@
 		4B286DE61C092E6800F59045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B286DE51C092E6800F59045 /* Assets.xcassets */; };
 		4B286DE91C092E6800F59045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B286DE71C092E6800F59045 /* LaunchScreen.storyboard */; };
 		4B286DF81C09304A00F59045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286DF11C09304A00F59045 /* AppDelegate.swift */; };
+		4B286DFA1C0938CC00F59045 /* LSBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286DF91C0938CC00F59045 /* LSBackgroundView.swift */; };
+		4B286DFC1C093C4600F59045 /* LimitedSpaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286DFB1C093C4600F59045 /* LimitedSpaceVC.swift */; };
+		4B286DFF1C093D4E00F59045 /* KRAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286DFD1C093D4E00F59045 /* KRAdditions.swift */; };
+		4B286E001C093D4E00F59045 /* KRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286DFE1C093D4E00F59045 /* KRUtility.swift */; };
+		4B286E021C093F5900F59045 /* LSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286E011C093F5900F59045 /* LSConfig.swift */; };
+		CF4ACD60B80878A933DEA4FF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFD151645343655DA01A47B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,14 @@
 		4B286DE81C092E6800F59045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B286DEA1C092E6800F59045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		4B286DF11C09304A00F59045 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B286DF91C0938CC00F59045 /* LSBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSBackgroundView.swift; sourceTree = "<group>"; };
+		4B286DFB1C093C4600F59045 /* LimitedSpaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitedSpaceVC.swift; sourceTree = "<group>"; };
+		4B286DFD1C093D4E00F59045 /* KRAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRAdditions.swift; sourceTree = "<group>"; };
+		4B286DFE1C093D4E00F59045 /* KRUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRUtility.swift; sourceTree = "<group>"; };
+		4B286E011C093F5900F59045 /* LSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSConfig.swift; sourceTree = "<group>"; };
+		BF53AB497CD3C21726F4DCAC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CFFD151645343655DA01A47B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD65A1C26A0E61FE9434D392 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4ACD60B80878A933DEA4FF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +53,8 @@
 			children = (
 				4B286DDD1C092E6800F59045 /* LimitedSpace */,
 				4B286DDC1C092E6800F59045 /* Products */,
+				913EE9EA606FFA3E76309451 /* Pods */,
+				7D699D00F669184589BCD186 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				4B286DEA1C092E6800F59045 /* Info.plist */,
+				4B286E011C093F5900F59045 /* LSConfig.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -89,6 +107,8 @@
 		4B286DF41C09304A00F59045 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				4B286DFD1C093D4E00F59045 /* KRAdditions.swift */,
+				4B286DFE1C093D4E00F59045 /* KRUtility.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -98,6 +118,7 @@
 			children = (
 				4B286DE21C092E6800F59045 /* Main.storyboard */,
 				4B286DE71C092E6800F59045 /* LaunchScreen.storyboard */,
+				4B286DF91C0938CC00F59045 /* LSBackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +126,7 @@
 		4B286DF61C09304A00F59045 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4B286DFB1C093C4600F59045 /* LimitedSpaceVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -117,6 +139,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7D699D00F669184589BCD186 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFFD151645343655DA01A47B /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		913EE9EA606FFA3E76309451 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF53AB497CD3C21726F4DCAC /* Pods.debug.xcconfig */,
+				FD65A1C26A0E61FE9434D392 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B286DED1C092E6800F59045 /* Build configuration list for PBXNativeTarget "LimitedSpace" */;
 			buildPhases = (
+				8889B5F8EE233CC7CBC6D9D9 /* Check Pods Manifest.lock */,
 				4B286DD71C092E6800F59045 /* Sources */,
 				4B286DD81C092E6800F59045 /* Frameworks */,
 				4B286DD91C092E6800F59045 /* Resources */,
+				6E15B806D0D8B735458D9BE6 /* Embed Pods Frameworks */,
+				700215D3CC6B6DE03B5E92F1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,12 +225,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E15B806D0D8B735458D9BE6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		700215D3CC6B6DE03B5E92F1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8889B5F8EE233CC7CBC6D9D9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B286DD71C092E6800F59045 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B286E021C093F5900F59045 /* LSConfig.swift in Sources */,
+				4B286DFF1C093D4E00F59045 /* KRAdditions.swift in Sources */,
 				4B286DF81C09304A00F59045 /* AppDelegate.swift in Sources */,
+				4B286DFA1C0938CC00F59045 /* LSBackgroundView.swift in Sources */,
+				4B286E001C093D4E00F59045 /* KRUtility.swift in Sources */,
+				4B286DFC1C093C4600F59045 /* LimitedSpaceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +394,7 @@
 		};
 		4B286DEE1C092E6800F59045 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF53AB497CD3C21726F4DCAC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LimitedSpace/Info.plist;
@@ -311,6 +407,7 @@
 		};
 		4B286DEF1C092E6800F59045 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD65A1C26A0E61FE9434D392 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LimitedSpace/Info.plist;
@@ -340,6 +437,7 @@
 				4B286DEF1C092E6800F59045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
