@@ -31,7 +31,6 @@ class Space < ActiveRecord::Base
     if( r <= space1.radius + space2.radius )
         isOverwrap = true
     end
-    p "#{r}   #{( space1.radius + space2.radius )}"
     return isOverwrap
   end
 
