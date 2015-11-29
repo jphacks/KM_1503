@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class LimitedSpaceVC: UIViewController {
     
     @IBOutlet weak var LSButton: UIButton!
+    
+    var locationManager:CLLocationManager?
     
 
     override func viewDidLoad() {
@@ -19,23 +22,47 @@ class LimitedSpaceVC: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("LSItemTapedAction:"), name: LSNotification.LSItemTaped.rawValue, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("changeLSButtonText"), name: LSNotification.MakedLS.rawValue, object: nil)
 
+        // 現在地の取得.
+        self.locationManager = CLLocationManager()
+        self.locationManager!.delegate = self
         
-        
-        // DEBUG 
-        self.mockCode()
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-
+        
+        self.locationManager?.startUpdatingLocation()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        // DEBUG
+        self.mockCode()
+    }
+    
+    func setLSItem(data :NSDictionary) {
+        
+    }
     
     func mockCode() {
-        let item = LSItemView(frame: CGRectMake(100, 100, 80, 80))
+        let item = LSItemView(frame: CGRectMake(100, 100, 20, 20))
+        item.center = CGPointMake(100, 100)
+        item.alpha = 0
         self.view.addSubview(item)
         let item2 = LSItemView(frame: CGRectMake(200, 200, 80, 80))
         self.view.addSubview(item2)
+        
+        
+        UIView.animateWithDuration(0.3) { () -> Void in
+            item.alpha = 1
+            var frame = item.frame
+            frame.size.width = 80
+            frame.size.height = 80
+            item.frame = frame
+            frame.origin = CGPointMake(0, 0)
+            item.subviews[0].frame = frame
+            item.subviews[0].layer.cornerRadius = frame.size.width/2
+            item.center = CGPointMake(100, 100)
+        }
     }
     
     
@@ -94,4 +121,16 @@ extension LimitedSpaceVC {
         }
     }
     
+}
+
+
+
+extension LimitedSpaceVC :CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = manager.location else { return }
+    
+        LSConnection.getLSItemWithAPI(location) { (data) -> Void in
+            print(data)
+        }
+    }
 }

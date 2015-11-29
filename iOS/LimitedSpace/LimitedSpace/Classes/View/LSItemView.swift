@@ -15,7 +15,9 @@ class LSItemView: UIView {
         let nib = UINib(nibName: "LSItemView", bundle: nil)
         let view = nib.instantiateWithOwner(self, options: nil).first as? UIView ?? UIView()
         view.frame = self.bounds
+        view.layer.cornerRadius = frame.size.width/2
         self.addSubview(view)
+        
     }
 
     required init?(coder aDecoder: NSCoder) {

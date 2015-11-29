@@ -16,6 +16,7 @@
 		4B286DFF1C093D4E00F59045 /* KRAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286DFD1C093D4E00F59045 /* KRAdditions.swift */; };
 		4B286E001C093D4E00F59045 /* KRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286DFE1C093D4E00F59045 /* KRUtility.swift */; };
 		4B286E021C093F5900F59045 /* LSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286E011C093F5900F59045 /* LSConfig.swift */; };
+		4B6F34231C0ABD1400465547 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F34221C0ABD1400465547 /* json.swift */; };
 		4BC33CBB1C0964A50094410C /* LSItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BC33CBA1C0964A50094410C /* LSItemView.xib */; };
 		4BC33CBD1C0964EC0094410C /* LSItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CBC1C0964EC0094410C /* LSItemView.swift */; };
 		4BC33CBF1C0970AA0094410C /* LSFileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CBE1C0970AA0094410C /* LSFileVC.swift */; };
@@ -41,6 +42,7 @@
 		4B286DFD1C093D4E00F59045 /* KRAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRAdditions.swift; sourceTree = "<group>"; };
 		4B286DFE1C093D4E00F59045 /* KRUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRUtility.swift; sourceTree = "<group>"; };
 		4B286E011C093F5900F59045 /* LSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSConfig.swift; sourceTree = "<group>"; };
+		4B6F34221C0ABD1400465547 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		4BC33CBA1C0964A50094410C /* LSItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSItemView.xib; sourceTree = "<group>"; };
 		4BC33CBC1C0964EC0094410C /* LSItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSItemView.swift; sourceTree = "<group>"; };
 		4BC33CBE1C0970AA0094410C /* LSFileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFileVC.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		4B286DF41C09304A00F59045 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				4B6F34221C0ABD1400465547 /* json.swift */,
 				4B286DFD1C093D4E00F59045 /* KRAdditions.swift */,
 				4B286DFE1C093D4E00F59045 /* KRUtility.swift */,
 			);
@@ -312,6 +315,7 @@
 			files = (
 				4B286E021C093F5900F59045 /* LSConfig.swift in Sources */,
 				4BC33CC21C098B530094410C /* LSFileListCell.swift in Sources */,
+				4B6F34231C0ABD1400465547 /* json.swift in Sources */,
 				4BC33CBF1C0970AA0094410C /* LSFileVC.swift in Sources */,
 				4BC33CCF1C0A93DE0094410C /* LimitedSpaceModel.swift in Sources */,
 				4BC33CCD1C0A0BD80094410C /* MakeLSVC.swift in Sources */,
