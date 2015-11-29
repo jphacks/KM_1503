@@ -17,6 +17,7 @@
 		4B286E001C093D4E00F59045 /* KRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286DFE1C093D4E00F59045 /* KRUtility.swift */; };
 		4B286E021C093F5900F59045 /* LSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B286E011C093F5900F59045 /* LSConfig.swift */; };
 		4B6F34231C0ABD1400465547 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F34221C0ABD1400465547 /* json.swift */; };
+		4B6F34251C0AC32600465547 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6F34241C0AC32600465547 /* CoreLocation.framework */; };
 		4BC33CBB1C0964A50094410C /* LSItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BC33CBA1C0964A50094410C /* LSItemView.xib */; };
 		4BC33CBD1C0964EC0094410C /* LSItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CBC1C0964EC0094410C /* LSItemView.swift */; };
 		4BC33CBF1C0970AA0094410C /* LSFileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CBE1C0970AA0094410C /* LSFileVC.swift */; };
@@ -43,6 +44,7 @@
 		4B286DFE1C093D4E00F59045 /* KRUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRUtility.swift; sourceTree = "<group>"; };
 		4B286E011C093F5900F59045 /* LSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSConfig.swift; sourceTree = "<group>"; };
 		4B6F34221C0ABD1400465547 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		4B6F34241C0AC32600465547 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4BC33CBA1C0964A50094410C /* LSItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSItemView.xib; sourceTree = "<group>"; };
 		4BC33CBC1C0964EC0094410C /* LSItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSItemView.swift; sourceTree = "<group>"; };
 		4BC33CBE1C0970AA0094410C /* LSFileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFileVC.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6F34251C0AC32600465547 /* CoreLocation.framework in Frameworks */,
 				CF4ACD60B80878A933DEA4FF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +178,7 @@
 		7D699D00F669184589BCD186 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B6F34241C0AC32600465547 /* CoreLocation.framework */,
 				CFFD151645343655DA01A47B /* Pods.framework */,
 			);
 			name = Frameworks;
