@@ -25,6 +25,7 @@
 		4BC33CCD1C0A0BD80094410C /* MakeLSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CCC1C0A0BD80094410C /* MakeLSVC.swift */; };
 		4BC33CCF1C0A93DE0094410C /* LimitedSpaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CCE1C0A93DE0094410C /* LimitedSpaceModel.swift */; };
 		4BC33CD11C0AA02D0094410C /* MyLSFileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CD01C0AA02D0094410C /* MyLSFileVC.swift */; };
+		4BC33CD31C0AA6AE0094410C /* LSConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC33CD21C0AA6AE0094410C /* LSConnection.swift */; };
 		CF4ACD60B80878A933DEA4FF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFD151645343655DA01A47B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		4BC33CCC1C0A0BD80094410C /* MakeLSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeLSVC.swift; sourceTree = "<group>"; };
 		4BC33CCE1C0A93DE0094410C /* LimitedSpaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitedSpaceModel.swift; sourceTree = "<group>"; };
 		4BC33CD01C0AA02D0094410C /* MyLSFileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLSFileVC.swift; sourceTree = "<group>"; };
+		4BC33CD21C0AA6AE0094410C /* LSConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSConnection.swift; sourceTree = "<group>"; };
 		BF53AB497CD3C21726F4DCAC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CFFD151645343655DA01A47B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD65A1C26A0E61FE9434D392 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				4BC33CCE1C0A93DE0094410C /* LimitedSpaceModel.swift */,
+				4BC33CD21C0AA6AE0094410C /* LSConnection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				4BC33CCF1C0A93DE0094410C /* LimitedSpaceModel.swift in Sources */,
 				4BC33CCD1C0A0BD80094410C /* MakeLSVC.swift in Sources */,
 				4B286DFF1C093D4E00F59045 /* KRAdditions.swift in Sources */,
+				4BC33CD31C0AA6AE0094410C /* LSConnection.swift in Sources */,
 				4BC33CD11C0AA02D0094410C /* MyLSFileVC.swift in Sources */,
 				4BC33CBD1C0964EC0094410C /* LSItemView.swift in Sources */,
 				4BC33CCB1C0A01290094410C /* LSFileViewerVC.swift in Sources */,
