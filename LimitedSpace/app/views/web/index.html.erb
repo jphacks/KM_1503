@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <link href="/assets/stylesheets/limispe.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container container-height">
+      <div class="row header-row headr-pad">
+        <div class="col-md-12 header">Limispe
+          <button type="button" class="btn btn-primary pull-right make-limispe-button-color " data-toggle="modal" data-target="#makeLimispe">スペる</button>
+        </div>
+      </div>
+
+      <div class = "row bg-row">
+        <div class="col-md-12 bg-col">
+          <div class="bg1"></div>
+        </div>
+
+      </div>
+
+      <div class="row footer-row footer-pad">
+        <div class="col-md-12 footer">footer</div>
+      </div>
+
+      <div class="modal" id="makeLimispe" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">リミスぺ作成</h4>
+            </div>
+            <form class="form-horizontal">
+              <div class="modal-body">
+                <div class="control-group">
+                  <label class="control-label" for="inputTitle">Title</label>
+                  <div class="controls">
+                    <input type="text" id="inputTitle" name="title" placeholder="Title">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label class="control-label" for="inputRadius">範囲</label>
+                  <select class="form-control" name="radius">
+                    <option value="50">50m</option>
+                    <option value="200">200m</option>
+                    <option value="400">400m</option>
+                    <option value="600">600m</option>
+                    <option value="800">800m</option>
+                    <option value="1000">1km</option>
+
+                  </select>
+                </div>
+
+                <div class="control-group">
+                  <label class="control-label" for="inputTime">時間</label>
+                  <select class="form-control" name="time">
+                    <option value="5">5分</option>
+                    <option value="10">10分</option>
+                    <option value="20">20分</option>
+                    <option value="30">30分</option>
+                    <option value="60">1時間</option>
+                    <option value="90">1時間30分</option>
+                    <option value="120">2時間</option>
+                    <option value="150">2時間30分</option>
+                    <option value="180">3時間</option>
+                  </select>
+                </div>
+
+                <div class="control-group">
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+                    <button type="submit" class="btn btn-primary">OK</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
