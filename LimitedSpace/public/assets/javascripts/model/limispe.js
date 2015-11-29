@@ -39,7 +39,6 @@ $(function(){
 
 LimitedSpace.prototype.init = function( limispeID, span, radius,created_at, name, x,y ) {
     
-    // 
     this.id = this.ID +  limispeID;
     this.span = span;
     this.radius = radius;
@@ -104,4 +103,3 @@ LimitedSpace.prototype.setPosition = function(x,y){
     this.setX(x);
     this.setY(y);
 }
-
