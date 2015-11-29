@@ -58,3 +58,6 @@ gem 'breadcrumbs_on_rails'
 group :development, :test do
       gem 'rspec-rails', '~> 3.0'
 end
+
+#CarrierWave
+gem "carrierwave"
