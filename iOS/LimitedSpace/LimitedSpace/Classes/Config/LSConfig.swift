@@ -39,6 +39,7 @@ enum LSColor {
 
 enum LSNotification :String {
     case LSItemTaped = "LSItemTaped"
+    case MakedLS = "makedLS"
 }
 
 
@@ -49,6 +50,12 @@ enum LSFileDisplayType {
 
 enum LSListCellType {
     case File, Folder
+}
+// ---------------------------------------
+
+// MakeLSVC --------------------------
+enum PickerType {
+    case Range, Time
 }
 // ---------------------------------------
 

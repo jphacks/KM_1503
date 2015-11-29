@@ -39,6 +39,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="LSButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HYN-58-r74"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -62,10 +65,168 @@
                     <navigationItem key="navigationItem" id="FJj-mj-rej"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="LSButton" destination="fhU-mY-zGN" id="OF2-6M-7Ac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908" y="326"/>
+        </scene>
+        <!--MakeLSVC-->
+        <scene sceneID="O08-we-lPE">
+            <objects>
+                <viewController storyboardIdentifier="makeLSVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iVa-LT-tXi" customClass="MakeLSVC" customModule="LimitedSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vtK-xe-aPT"/>
+                        <viewControllerLayoutGuide type="bottom" id="zdC-HB-6nd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KSL-ng-mtn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXA-Li-Zdr">
+                                <rect key="frame" x="20" y="84" width="280" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リミスペ作成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnP-a6-qoe">
+                                        <rect key="frame" x="87" y="8" width="107" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fok-AK-qwz">
+                                        <rect key="frame" x="93" y="185" width="179" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="1000m">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="LSRangeBtnTaped:" destination="iVa-LT-tXi" eventType="touchUpInside" id="9hy-zr-Uq7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リミスペ名:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1l-QH-LR6">
+                                        <rect key="frame" x="8" y="154" width="77" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="公開範囲:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBl-h2-y0p">
+                                        <rect key="frame" x="8" y="185" width="77" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adT-oV-8uV">
+                                        <rect key="frame" x="93" y="214" width="179" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="180分">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="LSTimeBtnTaped:" destination="iVa-LT-tXi" eventType="touchUpInside" id="a3U-RU-ItA"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="公開時間:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-TO-x6r">
+                                        <rect key="frame" x="8" y="214" width="77" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tct-J6-q4f">
+                                        <rect key="frame" x="93" y="152" width="160" height="25"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npt-3J-UZ9">
+                                        <rect key="frame" x="158" y="262" width="79" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="作成">
+                                            <color key="titleColor" red="1" green="0.56862745098039214" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.56862745100000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="makeBtnTaped:" destination="iVa-LT-tXi" eventType="touchUpInside" id="Bb7-mo-wZl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ7-I8-YNu">
+                                        <rect key="frame" x="44" y="262" width="79" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="キャンセル">
+                                            <color key="titleColor" red="1" green="0.56862745100000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="0.56862745100000001" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelBtnTaped:" destination="iVa-LT-tXi" eventType="touchUpInside" id="pBi-cS-5re"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnb-1Q-2yv">
+                                        <rect key="frame" x="100" y="46" width="80" height="80"/>
+                                        <animations/>
+                                        <state key="normal" image="noImage"/>
+                                        <connections>
+                                            <action selector="LSImageBtnTaped:" destination="iVa-LT-tXi" eventType="touchUpInside" id="SZO-LB-Q1c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96078431372549022" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="8A9-eS-zfs"/>
+                                    <constraint firstAttribute="height" constant="300" id="luw-mS-aj6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.49522569444444442" green="0.49522569444444442" blue="0.49522569444444442" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OXA-Li-Zdr" firstAttribute="centerY" secondItem="KSL-ng-mtn" secondAttribute="centerY" constant="-50" id="11t-DH-egI"/>
+                            <constraint firstItem="OXA-Li-Zdr" firstAttribute="centerX" secondItem="KSL-ng-mtn" secondAttribute="centerX" id="UCb-kZ-E3D"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="LSImageBtn" destination="hnb-1Q-2yv" id="kSL-p7-axL"/>
+                        <outlet property="LSNameTF" destination="Tct-J6-q4f" id="c6C-yK-to0"/>
+                        <outlet property="LSRangeBtn" destination="Fok-AK-qwz" id="R1M-e9-AVY"/>
+                        <outlet property="LSTimeBtn" destination="adT-oV-8uV" id="A2n-8g-S7w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPN-86-5Bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="1025"/>
         </scene>
         <!--リミスペ名-->
         <scene sceneID="SdL-li-Xo1">
@@ -166,12 +327,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cL-NU-mdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="326"/>
+            <point key="canvasLocation" x="1315" y="317"/>
         </scene>
         <!--File ViewerVC-->
         <scene sceneID="T26-Gg-DQ2">
             <objects>
-                <viewController storyboardIdentifier="fileViewerVC" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XPZ-7x-HjA" customClass="LSFileViewerVC" customModule="LimitedSpace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fileViewerVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XPZ-7x-HjA" customClass="LSFileViewerVC" customModule="LimitedSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ng5-XN-rhm"/>
                         <viewControllerLayoutGuide type="bottom" id="7cI-LZ-ess"/>
@@ -286,6 +447,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NyU-6b-B23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="493" y="326"/>
+        </scene>
+        <!--リミスペ名-->
+        <scene sceneID="5MH-TJ-N5X">
+            <objects>
+                <viewController storyboardIdentifier="MyLSFileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s3R-8X-GUK" customClass="MyLSFileVC" customModule="LimitedSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HTS-aQ-VXA"/>
+                        <viewControllerLayoutGuide type="bottom" id="VHj-Og-VFM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Mf-yN-uai">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQx-fe-VDy">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w00-GV-aXg">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="separatorColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="s3R-8X-GUK" id="Ien-fT-ghs"/>
+                                            <outlet property="delegate" destination="s3R-8X-GUK" id="PqU-t3-MN5"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="w00-GV-aXg" firstAttribute="leading" secondItem="IQx-fe-VDy" secondAttribute="leading" id="672-Nn-2eV"/>
+                                    <constraint firstAttribute="bottom" secondItem="w00-GV-aXg" secondAttribute="bottom" id="82r-N7-dlL"/>
+                                    <constraint firstAttribute="trailing" secondItem="w00-GV-aXg" secondAttribute="trailing" id="iRR-VK-oqQ"/>
+                                    <constraint firstItem="w00-GV-aXg" firstAttribute="top" secondItem="IQx-fe-VDy" secondAttribute="top" id="sGF-lv-Q4n"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7E-LW-uMH">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9pC-kt-bHm"/>
+                                </constraints>
+                                <color key="tintColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="xbE-HN-CfA">
+                                        <barButtonItem key="rightBarButtonItem" title="追加" id="zpW-aI-BkF"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="e7E-LW-uMH" firstAttribute="top" secondItem="HTS-aQ-VXA" secondAttribute="bottom" id="0pM-Zx-kbv"/>
+                            <constraint firstItem="IQx-fe-VDy" firstAttribute="leading" secondItem="8Mf-yN-uai" secondAttribute="leading" id="Br9-wI-g8P"/>
+                            <constraint firstAttribute="trailing" secondItem="IQx-fe-VDy" secondAttribute="trailing" id="OYx-r4-qUZ"/>
+                            <constraint firstItem="IQx-fe-VDy" firstAttribute="top" secondItem="HTS-aQ-VXA" secondAttribute="bottom" constant="44" id="R0H-1q-5AG"/>
+                            <constraint firstAttribute="trailing" secondItem="e7E-LW-uMH" secondAttribute="trailing" id="peI-uL-KXa"/>
+                            <constraint firstItem="e7E-LW-uMH" firstAttribute="leading" secondItem="8Mf-yN-uai" secondAttribute="leading" id="srQ-br-ckL"/>
+                            <constraint firstAttribute="bottom" secondItem="IQx-fe-VDy" secondAttribute="bottom" id="xfq-Si-gtT"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="リミスペ名" id="y6G-Lg-3QI"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="ListView" destination="IQx-fe-VDy" id="gag-rW-BlR"/>
+                        <outlet property="tableView" destination="w00-GV-aXg" id="dRw-Vc-kFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3z8-eJ-gbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="1025"/>
         </scene>
     </scenes>
     <resources>

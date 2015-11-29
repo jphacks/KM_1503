@@ -35,7 +35,7 @@ class LSFileViewerVC: UIViewController {
  */
 extension LSFileViewerVC {
     @IBAction func closeBtnTaped(sender: AnyObject) {
-        self.dismissViewControllerAnimated(false, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func downloadBtnTaped(sender: AnyObject) {
