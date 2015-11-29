@@ -112,7 +112,7 @@ extension LSFileVC :UITableViewDelegate, UITableViewDataSource {
             
             fileViewerVC.itemId = 1
             
-            self.presentViewController(fileViewerVC, animated: false, completion: nil)
+            self.presentViewController(fileViewerVC, animated: true, completion: nil)
             
         case .Folder :
             let vc = self.storyboard?.instantiateViewControllerWithIdentifier("LSFileListVC") as? LSFileVC
