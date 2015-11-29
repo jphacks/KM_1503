@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MakeLSVC: UIViewController {
     
@@ -16,11 +17,16 @@ class MakeLSVC: UIViewController {
     
     var pickData :[String]?
     var pickerType :PickerType = .Range
+    
+    var locationManager :CLLocationManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.LSNameTF.delegate = self
+        
+        self.locationManager = CLLocationManager()
+        self.locationManager?.delegate = self
     }
 
     
@@ -129,12 +135,8 @@ extension MakeLSVC {
         let range = Int(rangeStr.stringByReplacingOccurrencesOfString("m", withString: "")) ?? 0
         let time = Int(timeStr.stringByReplacingOccurrencesOfString("分", withString: "")) ?? 0
         
-        let ls = LimitedSpaceModel(title: title, range: range, time: time)
-        let lsData = NSKeyedArchiver.archivedDataWithRootObject(ls)
-        
-        NSUserDefaults.standardUserDefaults().setObject(lsData, forKey: "userLS")
-        NSUserDefaults.standardUserDefaults().synchronize()
-        
+//        self.locationManager?.startUpdatingLocation()
+  
         self.dismissViewControllerAnimated(true) {
             NSNotificationCenter.defaultCenter().postNotificationName(LSNotification.MakedLS.rawValue, object: nil)
         }
@@ -183,6 +185,45 @@ extension MakeLSVC :UIPickerViewDelegate, UIPickerViewDataSource {
             
         case .Time :
             self.LSTimeBtn.setTitle("\(rowStr)分", forState: .Normal)
+        }
+    }
+}
+
+
+extension MakeLSVC :CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = manager.location else { return }
+        
+        guard let text = self.LSNameTF.text else { return }
+        let title = text.stringByReplacingOccurrencesOfString(" ", withString: "")
+        if title == "" { return }
+        guard let rangeStr = self.LSRangeBtn.titleLabel?.text else { return }
+        guard let timeStr = self.LSTimeBtn.titleLabel?.text else { return }
+        
+        let range = Int(rangeStr.stringByReplacingOccurrencesOfString("m", withString: "")) ?? 0
+        let time = Int(timeStr.stringByReplacingOccurrencesOfString("分", withString: "")) ?? 0
+        
+        
+        let data :[String:AnyObject] = [
+            "name" : title,
+            "span" : time,
+            "radius" : range,
+            "lat" : Double(location.coordinate.latitude),
+            "lng" : Double(location.coordinate.longitude),
+            "icon" : UIImageJPEGRepresentation(LSImageBtn.imageView!.image!, 0.8)!
+        ]
+        
+        
+        LSConnection.registLimitedSpace(data) { () -> Void in
+            let ls = LimitedSpaceModel(title: title, range: range, time: time)
+            let lsData = NSKeyedArchiver.archivedDataWithRootObject(ls)
+            
+            NSUserDefaults.standardUserDefaults().setObject(lsData, forKey: "userLS")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            self.dismissViewControllerAnimated(true) {
+                NSNotificationCenter.defaultCenter().postNotificationName(LSNotification.MakedLS.rawValue, object: nil)
+            }
         }
     }
 }

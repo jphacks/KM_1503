@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class LimitedSpaceVC: UIViewController {
     
     @IBOutlet weak var LSButton: UIButton!
+    
+    var locationManager:CLLocationManager?
     
 
     override func viewDidLoad() {
@@ -19,23 +22,51 @@ class LimitedSpaceVC: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("LSItemTapedAction:"), name: LSNotification.LSItemTaped.rawValue, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("changeLSButtonText"), name: LSNotification.MakedLS.rawValue, object: nil)
 
+        // 現在地の取得.
+        self.locationManager = CLLocationManager()
+        self.locationManager!.delegate = self
         
-        
-        // DEBUG 
+        let status = CLLocationManager.authorizationStatus()
+        if(status == CLAuthorizationStatus.NotDetermined) {
+            self.locationManager!.requestAlwaysAuthorization()
+        }
+        self.locationManager!.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager!.distanceFilter = 100
+ 
+        // DEBUG
         self.mockCode()
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-
+        
+//        self.locationManager?.startUpdatingLocation()
     }
     
+    func setLSItem(data :NSDictionary) {
+        
+    }
     
     func mockCode() {
-        let item = LSItemView(frame: CGRectMake(100, 100, 80, 80))
-        self.view.addSubview(item)
-        let item2 = LSItemView(frame: CGRectMake(200, 200, 80, 80))
-        self.view.addSubview(item2)
+        for i in 1...2 {
+            let x = CGFloat(i*100)
+            let item = LSItemView(frame: CGRectMake(x, x, 20, 20))
+            item.center = CGPointMake(x, x)
+            item.alpha = 0
+            self.view.addSubview(item)
+            
+            UIView.animateWithDuration(Double(i)*0.3) { () -> Void in
+                item.alpha = 1
+                var frame = item.frame
+                frame.size.width = 80
+                frame.size.height = 80
+                item.frame = frame
+                frame.origin = CGPointMake(0, 0)
+                item.subviews[0].frame = frame
+                item.subviews[0].layer.cornerRadius = frame.size.width/2
+                item.center = CGPointMake(x, x)
+            }
+        }
     }
     
     
@@ -94,4 +125,20 @@ extension LimitedSpaceVC {
         }
     }
     
+}
+
+
+
+extension LimitedSpaceVC :CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = manager.location else { return }
+    
+        LSConnection.getLSItemWithAPI(location) { (data) -> Void in
+            print(data)
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("error:\(error)")
+    }
 }
