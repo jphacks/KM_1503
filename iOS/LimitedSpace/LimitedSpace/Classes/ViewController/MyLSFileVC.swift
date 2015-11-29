@@ -14,6 +14,7 @@ class MyLSFileVC: LSFileVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
