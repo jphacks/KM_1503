@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   # api
   get "api/getLimitedSpaces" => "api#getLimitedSpaces"
+  get "api/getSpaceDetail" => "api#getSpaceDetail"
   post "api/createLimitedSpaces" => "api#createLimitedSpaces"
 
   # The priority is based upon order of creation: first created -> highest priority.
