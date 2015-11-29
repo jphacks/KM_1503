@@ -6,6 +6,11 @@ function LimitedSpaceManager() {
     this.LimitedSpaces = [];
     // リミスペを配置できる範囲
     this.points = [];
+    
+    // 現在使われているpointsの内容
+    this.points_hash = [];
+    this.points_hash_index  = 0;
+
 }
 
 //  位置
@@ -37,11 +42,32 @@ LimitedSpaceManager.prototype.init = function () {
     
      console.log( this.points );
     try {
-
-        for (var i = 0; i< this.points.length; i++) {
+        
+        for (var i = 0; i< 2; i++) {
             var limited_space = new LimitedSpace();
             
-            limited_space.init(i, 100, 100, 100, 100, this.points[i].x, this.points[i].y );
+            var is_go = true;
+            var rand = Math.round( Math.random() * this.points.length );
+            
+            if( this.points_hash.length == 0 )
+                    is_go = false;
+            
+            while ( is_go ) {
+                rand = Math.round( Math.random() * this.points.length );
+                    
+                for ( var i= 0; i < this.points_hash.length; i++){
+                    is_go = false;
+                    if( rand == this.points_hash[i] ) {
+                        is_go = true;
+                        break;
+                    }  
+                }
+            }
+            console.log( is_go );
+            console.log ( rand );
+            this.points_hash[ this.points_hash_index++ ] = rand;
+            
+            limited_space.init(i, 100, 100, 100, 100, this.points[rand].x, this.points[rand].y );
             this.LimitedSpaces.push( limited_space );
             
         }
