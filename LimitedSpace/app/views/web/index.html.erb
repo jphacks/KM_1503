@@ -4,23 +4,31 @@
   </head>
 
   <body>
-    <div class="container container-height">
-      <div class="row header-row headr-pad">
-        <div class="col-md-12 header">Limispe
-          <button type="button" class="btn btn-primary pull-right make-limispe-button-color " data-toggle="modal" data-target="#makeLimispe">スペる</button>
-        </div>
+    <header class="header">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12 ">Limispe
+              <button type="button" class="btn btn-primary pull-right make-limispe-button-color " data-toggle="modal" data-target="#makeLimispe">スペる</button>
+            </div>
+          </div>
       </div>
+    </header>
 
+    <div class="container" id="wrap">
       <div class = "row bg-row">
         <div class="col-md-12 bg-col">
           <div class="bg1"></div>
         </div>
+      </div>
+    </div>
 
+    <footer class="footer">
+      <div class="container">
+      <div class="row">
+        <div class="col-md-12">footer</div>
       </div>
 
-      <div class="row footer-row footer-pad">
-        <div class="col-md-12 footer">footer</div>
-      </div>
+    </footer>
 
       <div class="modal" id="makeLimispe" tabindex="-1">
         <div class="modal-dialog">
@@ -31,40 +39,52 @@
             </div>
             <form class="form-horizontal">
               <div class="modal-body">
-                <div class="control-group">
-                  <label class="control-label" for="inputTitle">Title</label>
-                  <div class="controls">
-                    <input type="text" id="inputTitle" name="title" placeholder="Title">
+
+                <div class="container modal-container " >
+                  <div class="row">
+                    <div class="col-sm-8 col-xs-8 col-md-8">
+                      <div class="control-group">
+                        <label class="control-label" for="inputTitle">Title</label>
+                        <div class="controls">
+                          <input type="text" id="inputTitle" name="title" placeholder="Title">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 col-md-4">
+                      <img src="/assets/images/icon.png" class="img-responsive">
+                    </div>
+
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="inputRadius">範囲</label>
+                    <select class="form-control" name="radius">
+                      <option value="50">50m</option>
+                      <option value="200">200m</option>
+                      <option value="400">400m</option>
+                      <option value="600">600m</option>
+                      <option value="800">800m</option>
+                      <option value="1000">1km</option>
+
+                    </select>
+                  </div>
+
+                  <div class="control-group">
+                    <label class="control-label" for="inputTime">時間</label>
+                    <select class="form-control" name="time">
+                      <option value="5">5分</option>
+                      <option value="10">10分</option>
+                      <option value="20">20分</option>
+                      <option value="30">30分</option>
+                      <option value="60">1時間</option>
+                      <option value="90">1時間30分</option>
+                      <option value="120">2時間</option>
+                      <option value="150">2時間30分</option>
+                      <option value="180">3時間</option>
+                    </select>
                   </div>
                 </div>
 
-                <div class="control-group">
-                  <label class="control-label" for="inputRadius">範囲</label>
-                  <select class="form-control" name="radius">
-                    <option value="50">50m</option>
-                    <option value="200">200m</option>
-                    <option value="400">400m</option>
-                    <option value="600">600m</option>
-                    <option value="800">800m</option>
-                    <option value="1000">1km</option>
 
-                  </select>
-                </div>
-
-                <div class="control-group">
-                  <label class="control-label" for="inputTime">時間</label>
-                  <select class="form-control" name="time">
-                    <option value="5">5分</option>
-                    <option value="10">10分</option>
-                    <option value="20">20分</option>
-                    <option value="30">30分</option>
-                    <option value="60">1時間</option>
-                    <option value="90">1時間30分</option>
-                    <option value="120">2時間</option>
-                    <option value="150">2時間30分</option>
-                    <option value="180">3時間</option>
-                  </select>
-                </div>
 
                 <div class="control-group">
                   <div class="modal-footer">
