@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyString
+  size: 1
+  space_id: 1
+  download_sum: 1
+  type: 1
+  soft_destroyed_at: 2015-11-27 22:52:29
+
+two:
+  path: MyString
+  size: 1
+  space_id: 1
+  download_sum: 1
+  type: 1
+  soft_destroyed_at: 2015-11-27 22:52:29

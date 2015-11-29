@@ -1,0 +1,87 @@
+<html>
+  <head>
+
+    <!-- bootstrap -->
+    <link href="/assets/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="/assets/stylesheets/limispe.css" rel="stylesheet">
+
+    <!-- javascript -->
+    <script src="/assets/javascripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="/assets/javascripts/bootstrap.min.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+    <div class="container container-height">
+      <div class="row header-row">
+        <div class="col-md-12 header">Limispe</div>
+      </div>
+
+      <div class = "row">
+        <div class="col-xs-3 col-sm-3 col-md-3">icon</div>
+        <div class="col-xs-9 col-sm-9 col-md-9">pankuzu</div>
+      </div>
+
+      <div class="row file-row-pad">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="container">menu
+          </div>
+        </div>
+
+        <div class="col-xs-9 col-sm-9 col-md-9">
+          <div class="panel panel-default">
+            <div class="table-responsive table-bordered">
+              <table class="table file-font">
+                <thead>
+                  <tr>
+                    <th>名前</th>
+                    <th>最終更新</th>
+                    <th>ファイルサイズ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#view" data-toggle="modal">filename</a></td>
+                    <td>2015/12/01</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footer-row">
+        <div class="col-md-12 footer">footer</div>
+      </div>
+
+    </div>
+
+    <!-- モーダル -->
+    <div class="modal" id="view" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">タイトル</h4>
+          </div>
+          <div class="modal-body">内容</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">ダウンロード</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+           </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

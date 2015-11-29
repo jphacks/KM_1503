@@ -23,8 +23,10 @@ class MyLSFileVC: LSFileVC {
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-//            .removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+//            let cell = tableView.cellForRowAtIndexPath(indexPath)
+//            cell?.removeFromSuperview()
+//            tableView.reloadData()
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
 }
