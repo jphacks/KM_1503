@@ -43,6 +43,8 @@ LimitedSpaceManager.prototype.init = function () {
      console.log( this.points );
     try {
         
+        console.log( window.spaces );
+        
         for (var i = 0; i< 2; i++) {
             var limited_space = new LimitedSpace();
             

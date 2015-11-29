@@ -72,7 +72,7 @@ LimitedSpace.prototype.setCSS = function() {
         ,"border-radius" : " 400px"
         ," border" : "5px solid #fff"
         ,"box-shadow" : "0px 0px 10px #ccc, inset 0px 0px 10px rgba(0, 0, 0, 0.8)"
-        ,"background" : "url( " + "7205325.jpeg" +") center center"
+        ,"background" : "url( " + "/assets/images/test.jpeg" +") center center"
         ,"background-size" : "cover"
         ,"-webkit-animation-duration": "1s"
         ,"-webkit-animation-delay" : ".5s"

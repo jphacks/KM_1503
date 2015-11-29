@@ -4,6 +4,10 @@
     <link href="/assets/stylesheets/animate.min.css" rel="stylesheet">
   </head>
 
+<%= javascript_tag do %>
+    window.spaces = <%= raw @spaces.to_json %>;
+<% end %>
+
   <body>
     <header class="header">
       <div class="container">
